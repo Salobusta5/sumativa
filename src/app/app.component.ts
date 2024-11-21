@@ -73,4 +73,9 @@ isLoading: boolean = false;
       console.log('Proceso completado');
     }, 3000);  // Simulando un retraso de 3 segundos
   }
+
+  onButtonClick2() {
+    console.log('Botón clickeado, proceso iniciado...');
+    alert("Hola Mundo");
+  }
 }

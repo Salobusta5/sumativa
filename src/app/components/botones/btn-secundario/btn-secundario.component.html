@@ -1,1 +1,10 @@
-<button (click)="onClick()">Secundario</button>
+<button 
+  (mousedown)="onMouseDown()" 
+  (mouseup)="onMouseUp()" 
+  (mouseleave)="onMouseLeave()"
+  [class.pressed]="isPressed"
+  class="btn-expansion">
+  
+  <span *ngIf="!isPressed">Haz clic</span>
+  <span *ngIf="isPressed">¡Procesando!</span>
+</button>

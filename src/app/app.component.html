@@ -7,15 +7,15 @@
 <app-email (emailChange)="email = $event"></app-email>
 <app-contra (passwordChange)="password = $event"></app-contra>
 <app-txt (textoChange)="texto = $event"></app-txt>
-</div>
+
 
 <div class="botones">
 <app-btn-aceptar (clickAceptar)="onAceptar()"></app-btn-aceptar>
 <app-btn-cancelar (clickEvent)="onCancelar()"></app-btn-cancelar>
-<app-btn-secundario (onPrimario)="handleSecundarioClick()"></app-btn-secundario>
+<app-btn-secundario (onClick)="onButtonClick()"></app-btn-secundario >
 <app-btn-primario (onClick)="onButtonClick()"></app-btn-primario>
-<p *ngIf="isLoading">Procesando...</p>
 <app-btn-oscuro (darkModeToggle)="onDarkModeToggle($event)"></app-btn-oscuro>
+</div>
 </div>
 
 

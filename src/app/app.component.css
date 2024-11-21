@@ -21,9 +21,12 @@ h2{
 }
 /* Sección izquierda (botones y formulario) */
 .izquierda {
+  top: 80px;
+  left: -450px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
 }
 
 /* Botones alineados arriba */
@@ -118,6 +121,9 @@ body.dark-mode .visualiza {
   justify-content: flex-start;
   gap: 15px;
   padding-left: 20px;
+  position: relative;
+  right: -800px;
+  top: -200px;
 }
 .Container.dark-mode {
   background-color: #242424; /* Fondo oscuro */
