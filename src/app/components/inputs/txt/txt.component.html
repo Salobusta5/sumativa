@@ -1,0 +1,10 @@
+<p></p>
+<label for="texto">Texto:</label>
+<input 
+  id="texto" 
+  [(ngModel)]="texto" 
+  type="text" 
+  (input)="onTextoChange()" 
+  placeholder="Ingrese Texto"
+/>
+<p *ngIf="textoInvalido" style="color: red;">El texto no puede estar vacío</p>

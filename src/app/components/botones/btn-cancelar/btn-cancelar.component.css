@@ -1,0 +1,31 @@
+button {
+  background-color: rgb(171, 111, 255);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+
+  /* 3D effect styles */
+  box-shadow: 0 4px 6px -6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  /* Add a subtle gradient for a slight shine */
+  background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px -6px rgba(0, 0, 0, 0.7);
+
+  /* Increase shine on hover */
+  background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px -4px rgba(0, 0, 0, 0.3);
+
+  /* Reduce shine when pressed */
+  background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+}

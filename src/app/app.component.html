@@ -1,0 +1,25 @@
+<div class="Container" [class.dark-mode]="isDarkMode">
+  <div class="header">
+    <h2>SUMATIVA </h2>
+  </div>
+
+<div class="izquierda">
+<app-email (emailChange)="email = $event"></app-email>
+<app-contra (passwordChange)="password = $event"></app-contra>
+<app-txt (textoChange)="texto = $event"></app-txt>
+</div>
+
+<div class="botones">
+<app-btn-aceptar (clickAceptar)="onAceptar()"></app-btn-aceptar>
+<app-btn-cancelar (clickEvent)="onCancelar()"></app-btn-cancelar>
+<app-btn-secundario (onPrimario)="handleSecundarioClick()"></app-btn-secundario>
+<app-btn-primario (onClick)="onButtonClick()"></app-btn-primario>
+<p *ngIf="isLoading">Procesando...</p>
+<app-btn-oscuro (darkModeToggle)="onDarkModeToggle($event)"></app-btn-oscuro>
+</div>
+
+
+<div class="visualiza">
+<app-visualizador [email]="email" [password]="password" [texto]="texto" ></app-visualizador>
+</div>
+</div>

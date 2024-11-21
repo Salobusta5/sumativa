@@ -1,0 +1,12 @@
+input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+  }
+
+p{
+   color: rgb(219, 154, 255); 
+   font-size: small;
+}
+  

@@ -1,0 +1,132 @@
+/* General: Contenedor principal */
+.Container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas: izquierda y derecha */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 8px;
+  background-color: rgb(255, 241, 248);
+  box-shadow: 0 4px 10px rgba(251, 25, 78, 0.1);
+}
+
+/* Modo oscuro: dinámico */
+body.dark-mode .Container {
+  background-color: #333;
+  color: white;
+}
+h2{
+  color: #ff4184;
+}
+/* Sección izquierda (botones y formulario) */
+.izquierda {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Botones alineados arriba */
+.botones {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* Permite que los botones se ajusten en varias filas si es necesario */
+}
+
+.botones button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+}
+
+.botones .btn-aceptar {
+  background-color: green;
+}
+
+.botones .btn-cancelar {
+  background-color: red;
+}
+
+.botones .btn-primario {
+  background-color: blue;
+}
+
+.botones .btn-secundario {
+  background-color: purple;
+}
+
+.botones .btn-oscuro {
+  background-color: black;
+  color: white;
+}
+
+/* Formulario debajo de los botones */
+.izquierda .formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaciado entre campos */
+}
+
+.izquierda input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #404ac1;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.izquierda label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+body.dark-mode .izquierda input {
+  background-color: #444;
+  border: 1px solid #555;
+  color: white;
+}
+
+/* Sección derecha: Visualización */
+.visualiza {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  border-left: 2px solid #ff4184;
+}
+
+.visualiza h3 {
+  margin-top: 0;
+}
+
+.visualiza div {
+  margin-bottom: 10px;
+}
+
+body.dark-mode .visualiza {
+  border-left-color: #555;
+}
+
+.Container .visualiza {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+  padding-left: 20px;
+}
+.Container.dark-mode {
+  background-color: #242424; /* Fondo oscuro */
+  color: white;
+  border: 1px solid #000000; /* Borde oscuro */
+}
+.Container.dark-mode .izquierda{
+  border-right: 2px solid #444; /* Línea divisoria más oscura */
+}
+.Container.dark-mode h2 {
+  color: white;
+  }

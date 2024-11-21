@@ -1,0 +1,12 @@
+<div class="form-group">
+    <label for="email">Correo</label>
+    <input 
+      id="email" 
+      [(ngModel)]="email" 
+      type="email" 
+      (input)="validateEmail()" 
+      placeholder="Ingrese su correo electrónico"
+    />
+    <p *ngIf="!isValidEmail">Correo inválido</p>
+  </div>
+  

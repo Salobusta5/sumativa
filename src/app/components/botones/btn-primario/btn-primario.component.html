@@ -1,0 +1,7 @@
+<button 
+  (click)="handleClick()" 
+  [disabled]="isLoading" 
+  class="btn-primary">
+  <img *ngIf="isLoading" src="assets/loader.gif" alt="Cargando..." class="loader-img">
+  <span *ngIf="!isLoading">Enviar</span>
+</button>
