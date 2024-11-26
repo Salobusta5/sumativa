@@ -5,11 +5,12 @@
     margin-bottom: 10px; /* Espaciado entre campos */
   }
   
-  label {
-    font-size: 15px;
+  label  {
     font-weight: bold;
-    margin-bottom: 5px; /* Espacio entre la etiqueta y el campo */
-  }
+    font-family: monospace;
+    font-size: large;
+    
+    }
   
   input {
     padding: 3px;

@@ -1,8 +1,7 @@
-/* General: Contenedor principal */
+/* Contenedor principal */
 .Container {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas: izquierda y derecha */
-  gap: 20px;
+  display: flex; /* Flexbox para alinear en una fila */
+  gap: 40px; /* Espaciado entre la izquierda y derecha */
   padding: 20px;
   max-width: 1200px;
   margin: auto;
@@ -10,30 +9,36 @@
   background-color: rgb(255, 241, 248);
   box-shadow: 0 4px 10px rgba(251, 25, 78, 0.1);
 }
-
+h5{
+  color: #ff93b9;
+  text-align: center;
+}
 /* Modo oscuro: dinámico */
 body.dark-mode .Container {
   background-color: #333;
   color: white;
 }
-h2{
+/* Encabezado */
+h2 {
   color: #ff4184;
+  text-align: center;
+  width: 100%; /* Abarca todo el ancho */
 }
-/* Sección izquierda (botones y formulario) */
+
+
+/* Sección izquierda */
 .izquierda {
-  top: 80px;
-  left: -450px;
+  flex: 1; /* Ocupa todo el espacio disponible a la izquierda */
   display: flex;
   flex-direction: column;
   gap: 20px;
-  position: relative;
 }
 
-/* Botones alineados arriba */
+/* Botones */
 .botones {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap; /* Permite que los botones se ajusten en varias filas si es necesario */
+  flex-wrap: wrap;
 }
 
 .botones button {
@@ -66,13 +71,7 @@ h2{
   color: white;
 }
 
-/* Formulario debajo de los botones */
-.izquierda .formulario {
-  display: flex;
-  flex-direction: column;
-  gap: 15px; /* Espaciado entre campos */
-}
-
+/* Inputs del formulario */
 .izquierda input {
   width: 100%;
   padding: 10px;
@@ -85,54 +84,51 @@ h2{
   font-size: 14px;
   margin-bottom: 5px;
 }
-
 body.dark-mode .izquierda input {
   background-color: #444;
   border: 1px solid #555;
   color: white;
 }
 
-/* Sección derecha: Visualización */
+/* Sección derecha: Visualizador */
 .visualiza {
+  width: 300px; /* Ancho fijo para el visualizador */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 20px;
   border-left: 2px solid #ff4184;
+  background-color: #ffffff57; /* Fondo blanco */
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  
 }
 
-.visualiza h3 {
-  margin-top: 0;
-}
-
-.visualiza div {
-  margin-bottom: 10px;
+/* Modo oscuro */
+body.dark-mode .Container {
+  background-color: #333;
+  color: white;
 }
 
 body.dark-mode .visualiza {
   border-left-color: #555;
-}
-
-.Container .visualiza {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 15px;
-  padding-left: 20px;
-  position: relative;
-  right: -800px;
-  top: -200px;
+  background-color: #444;
+  color:#ff4184;
 }
 .Container.dark-mode {
-  background-color: #242424; /* Fondo oscuro */
-  color: white;
+  background-color: #242424; /* FondoSS oscuro */
+  color: rgb(255, 191, 244);
   border: 1px solid #000000; /* Borde oscuro */
 }
-.Container.dark-mode .izquierda{
-  border-right: 2px solid #444; /* Línea divisoria más oscura */
-}
+
 .Container.dark-mode h2 {
   color: white;
+  }
+
+
+  img{
+width: 180px;
+    height: 300px;
   }

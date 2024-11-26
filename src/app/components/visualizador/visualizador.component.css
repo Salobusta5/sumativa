@@ -1,4 +1,9 @@
 #cuadrado {
     transition: background-color 0.3s ease;
   }
-  
+  .message {
+    background-color: lightgreen;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }

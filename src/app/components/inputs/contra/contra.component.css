@@ -1,8 +1,15 @@
+label  {
+font-weight: bold;
+font-family: monospace;
+font-size: large;
+
+}
 input {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
     width: 100%;
+    
   }
 
 p{

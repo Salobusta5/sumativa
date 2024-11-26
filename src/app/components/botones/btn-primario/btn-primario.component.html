@@ -1,7 +1,12 @@
-<button 
-  (click)="handleClick()" 
-  [disabled]="isLoading" 
-  class="btn-primary">
+<button (click)="handleClick()" [disabled]="isLoading" class="btn-primary">
   <span *ngIf="isLoading" class="loader"></span>
-  <span *ngIf="!isLoading">Enviar</span>
+  <span *ngIf="!isLoading && !showImage">Diciembre de </span> 
+ 
 </button>
+
+<div *ngIf="showImage" class="popup-overlay" (click)="handleClosePopup()">
+  <!-- El popup se mostrará aquí -->
+  <div class="popup-content">
+      <img src="./felicho.jpg" alt="Imagen">
+  </div>
+</div>

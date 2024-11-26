@@ -3,12 +3,11 @@
   background-color:rgba(111, 212, 255, 0.777);
   color: white;
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 20px;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  box-shadow: 0 4px 6px -6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-primary:disabled {
@@ -29,4 +28,43 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+.popup-overlay {
+  position: fixed; /* Agrega esta línea */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Agrega esta línea para asegurar que esté encima de otros elementos */
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.popup-image {
+  /* Estilos para la imagen dentro del popup (opcional) */
+  max-width: 80%;
+  max-height: 80%;
+}
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px -6px rgba(0, 0, 0, 0.7);
+
+  /* Increase shine on hover */
+  background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px -4px rgba(0, 0, 0, 0.3);
+
+  /* Reduce shine when pressed */
+  background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
 }

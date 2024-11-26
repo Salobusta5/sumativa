@@ -11,6 +11,7 @@ import { BtnPrimarioComponent } from './components/botones/btn-primario/btn-prim
 import { BtnSecundarioComponent } from './components/botones/btn-secundario/btn-secundario.component';
 import { TxtComponent } from './components/inputs/txt/txt.component';
 import { NgIf } from '@angular/common';
+
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, 
@@ -24,7 +25,7 @@ import { NgIf } from '@angular/common';
             BtnOscuroComponent, 
             BtnPrimarioComponent, 
             BtnSecundarioComponent,
-             NgIf],
+             NgIf, BtnCancelarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -38,12 +39,19 @@ export class AppComponent {
   showMessage = false;
 
   onAceptar() {
+  this.showMessage = true; // Mostrar el mensaje
     console.log('Botón Aceptar clickeado');
   }
 
-  onCancelar() { 
-    console.log('Botón Cancelar clickeado');
-  }
+
+    onCancelar() {
+      // Limpiar los campos de entrada
+      this.email = '    ';
+      this.password = '  ';
+      this.texto = '  ';
+      console.log('Datos borrados');
+    }
+  
 
 
   handlePrimarioClick() {

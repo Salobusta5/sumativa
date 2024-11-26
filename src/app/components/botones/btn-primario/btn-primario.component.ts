@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter  } from '@angular/core';
+import { Component, Output, EventEmitter,Input  } from '@angular/core';
 import { NgIf } from '@angular/common';
 @Component({
   selector: 'app-btn-primario',
@@ -7,15 +7,22 @@ import { NgIf } from '@angular/common';
   styleUrl: './btn-primario.component.css'
 })
 export class BtnPrimarioComponent {
-  @Output() onClick = new EventEmitter<void>();
-  isLoading: boolean = false;
+  @Input() isLoading: boolean = false;
+  @Output() click = new EventEmitter<void>();
+
+  showImage: boolean = false;
 
   handleClick() {
     this.isLoading = true;
-    this.onClick.emit(); // Emitir el evento hacia el componente padre
+    this.click.emit();
+    setTimeout(() => {
+      this.isLoading = false;
+      this.showImage = true; // Mostrar el popup después de 3 segundos
+    }, 3000);
   }
 
-  stopLoading() {
-    this.isLoading = false;
+  handleClosePopup() {
+    this.showImage = false; // Cerrar el popup
   }
+
 }
